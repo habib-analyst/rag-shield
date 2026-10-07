@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-shield"
+version = "0.1.0"
+description = "Offline prompt-injection / poisoned-document detector for RAG corpora"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Habib Ur Rehman" }]
+keywords = ["rag", "prompt-injection", "security", "llm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+
+[project.scripts]
+rag-shield = "ragshield.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["ragshield*"]
